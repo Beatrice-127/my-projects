@@ -14,5 +14,5 @@ Here are some of the projects included in this repository:
 
 Feel free to reach out!
 
-- GitHub: [@yourusername](https://github.com/yourusername)
-- Email: yourname@example.com
+- GitHub: [@Libei Wang](https://github.com/Beatrice-127)
+- Email: libeiw127@gmail.com
