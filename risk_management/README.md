@@ -44,12 +44,11 @@ The target variable `isDefault` is **imbalanced**, which is typical in credit ri
 In credit risk modeling, **Information Value (IV)** helps evaluate how predictive a variable is.  
 We used the `toad` library to compute IVs, and found three variables with high predictive power.
 
-![iv](images/iv.png)
+<img src="images/iv.png" alt="iv" width="40%"/>
 
 A correlation analysis reveals that these high-IV features are **highly correlated** with each other:
 
-
-![iv_corr](images/high_iv_corr.png)
+<img src="images/high_iv_corr.png" alt="iv_corr" width="40%"/>
 
 
 
@@ -59,7 +58,7 @@ A correlation analysis reveals that these high-IV features are **highly correlat
 
 To explore this, we binned the `interestRate` feature and examined its relationship with the default rate:
 
-![irandisdefault](images/interest_rate_and_bad_rate.png)
+<img src="images/interest_rate_and_bad_rate.png" alt="irandisdefault" width="60%"/>
 
 It makes intuitive sense: clients with better credit scores tend to receive lower interest rates.  
 But this raises a deeper question:
@@ -78,7 +77,8 @@ The feature engineering includes
 
 
 We removed unstable features to avoid customer loss due to model drift or unstable scoring.
-![psi](images/psi.png)
+
+<img src="images/psi.png" alt="psi" width="35%"/>
 
 
 
@@ -109,12 +109,12 @@ Model performance is visualized using:
 - **ROC Curve (AUC)**  
 - **Confusion Matrix**
 
-![auc](images/roc_curve_eda.png)
+<img src="images/roc_curve_eda.png" alt="auc" width="60%"/>
 
 The **ROC curve** illustrates the trade-off between the true positive rate (recall) and false positive rate across thresholds.  
 A high **AUC** score suggests that the model effectively distinguishes between users who default and those who don't.
 
-![cmatrix](images/confusion_matrix_eda.png)
+<img src="images/confusion_matrix_eda.png" alt="cm" width="60%"/>
 
 The **confusion matrix** provides detailed insight into how the model performs across different prediction outcomes.
 
