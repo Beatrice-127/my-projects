@@ -84,8 +84,26 @@ We removed unstable features to avoid customer loss due to model drift or unstab
 
 ## Model Training and Evaluation
 
+### Model Selection
 We chose XGBoost as the final model for its strong performance on tabular data and ability to handle feature interactions. A more detailed explanation is coming soon.
 
+
+### Model Training: Colab vs. Azure?
+During this project, I experimented with both **Azure Notebooks** and **Google Colab** — mainly because my poor MacBook Air just isn’t built for this kind of workload.
+
+The code in this repository is based on the **Google Drive + Colab** setup, which you’ll notice from the `mount drive` snippet at the beginning.
+
+Here’s my take:
+
+- **Azure** is powerful and well-integrated, but not free.  
+- **Colab**, on the other hand, is free and surprisingly capable — but with a catch:  
+  If you close the tab or get disconnected, you risk losing progress.
+
+To mitigate this, I use the `callbacks` parameter in XGBoost to automatically save the model every 50 rounds.  
+These checkpoints are saved in the `risk_checkpoint` folder on Google Drive, so I can recover my progress even after unexpected interruptions.
+
+
+### Model Evaluation
 Model performance is visualized using:
 
 - **ROC Curve (AUC)**  
