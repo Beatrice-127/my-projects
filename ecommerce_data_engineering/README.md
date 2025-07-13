@@ -1,4 +1,4 @@
-#  🛒 E-Commerce Data Pipeline (Azure ETL Project)
+#  E-Commerce Data Pipeline (Azure ETL Project)
 
 <img src="images/ecomm_engineer.png" alt="pipeline" width="80%"/>
 
@@ -26,7 +26,7 @@ Stay tuned! This project is continuously evolving as I explore new ideas and tec
 
 
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 ###  Cloud & Storage
 
