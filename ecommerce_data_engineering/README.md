@@ -1,6 +1,6 @@
 #  🛒 E-Commerce Data Pipeline (Azure ETL Project)
 
-<img src="images/ecomm_engineer.png" alt="pipeline" width="60%"/>
+<img src="images/ecomm_engineer.png" alt="pipeline" width="80%"/>
 
 This project showcases an end-to-end **ETL pipeline built on Medallion Architecture**, designed to deliver business insights through **Azure Data Services** — with a touch of data visualization.
 
@@ -10,7 +10,7 @@ The pipeline ingests and processes data from the [Brazilian E-Commerce Public Da
 
 The goal is to simulate a production-grade data pipeline where messy, fragmented data is transformed into clean, structured, and analytics-ready layers — supporting everything from BI dashboards to predictive modeling.
 
-<img src="images/olist_data.png" alt="data" width="40%"/>
+<img src="images/olist_data.png" alt="data" width="70%"/>
 
 ## What's next?
 
