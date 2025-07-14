@@ -1,28 +1,69 @@
 #  E-Commerce Data Pipeline (Azure ETL Project)
 
+
+
+This project simulates a **production-grade end-to-end data pipeline** built on **Azure Data Services**, using the **Medallion Architecture** (Bronze → Silver → Gold). It transforms messy, fragmented e-commerce data into analytics-ready layers that support BI dashboards and machine learning workflows.
+
+The pipeline ingests data from the [Brazilian E-Commerce Public Dataset by Olist](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce), which includes over 100,000 anonymized orders, covering customer behavior, product attributes, reviews, and shipping logistics.
+
+
+
+## Architecture Overview
+
 <img src="images/ecomm_engineer.png" alt="pipeline" width="80%"/>
 
-This project showcases an end-to-end **ETL pipeline built on Medallion Architecture**, designed to deliver business insights through **Azure Data Services** — with a touch of data visualization.
+This pipeline follows a layered architecture with well-defined separation of concerns:
 
-It serves as a key component of a broader full-stack data platform, combining diverse technologies across data engineering, analytics, and machine learning. The focus here is on turning raw, siloed data into meaningful and actionable information, as a company would in a real-world setting.
+1. **Ingestion**: Raw data from CSV files is ingested using **Azure Data Factory** into **ADLS Gen2 (Bronze layer)**.
+2. **Processing**: **Azure Databricks (PySpark)** transforms and joins datasets into the **Silver layer**.
+3. **Enrichment**: External lookup data from **MongoDB** is merged to add business context (e.g., category names).
+4. **Analytics**: The **Gold layer** is used by **Azure Synapse** and **Tableau** for BI and modeling purposes.
 
-The pipeline ingests and processes data from the [Brazilian E-Commerce Public Dataset by Olist](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce), which contains over 100,000 anonymized orders from 2016 to 2018 across various Brazilian marketplaces. The dataset spans nine structured CSV files and includes details on customer behavior, product attributes, reviews, shipping logistics, and more.
 
-The goal is to simulate a production-grade data pipeline where messy, fragmented data is transformed into clean, structured, and analytics-ready layers — supporting everything from BI dashboards to predictive modeling.
 
-<img src="images/olist_data.png" alt="data" width="70%"/>
-
-## What's next?
+### What's next?
 
 I believe this dataset opens the door to many exciting analytical possibilities. Here’s what I plan to build next:
 
-- [ ]  **Interactive KPI Dashboard** – Built with Tableau to monitor core business metrics.
+- [ ] **Interactive KPI Dashboard** – Built with Tableau to monitor core business metrics.
 - [ ] **RFM Segmentation** – Using Recency, Frequency, and Monetary value to group customers via visualization and **unsupervised learning** algorithms.
 - [ ] **Customer behavior** – Combining the [Marketing Funnel by Olist](https://www.kaggle.com/datasets/olistbr/marketing-funnel-olist) to analysis how to promote the business.
 
 ---
 
 Stay tuned! This project is continuously evolving as I explore new ideas and techniques. 😊
+
+
+
+##  Data Quality Monitoring
+
+Implemented core data validation checks at each pipeline stage:
+
+- Schema validation and column type enforcement  
+- Null & duplicate detection in key fields (`order_id`, `customer_id`)  
+- Referential integrity across orders, products, and customers  
+- Date consistency: e.g., delivery date > purchase date  
+- Business logic: no negative freight or payment values  
+
+
+
+## Governance & Access Control
+
+-  Bronze layer access restricted to ingestion users  
+-  Silver/Gold accessible by BI and analytics teams  
+-  Parquet format + Synapse views allow for future row-level security  
+
+
+
+## BI-Ready Outputs
+
+The pipeline is designed to serve the following analytics needs:
+
+- **Daily Sales KPI Dashboard** (Total Revenue, Freight, Avg Rating)  
+- **Customer Segmentation via RFM**  
+- **Order Fulfillment Analysis** (delays, regions, trends)  
+
+_Tableau dashboards in progress and planned for publication._
 
 
 
@@ -55,3 +96,4 @@ Stay tuned! This project is continuously evolving as I explore new ideas and tec
 - **Medallion Architecture** (Bronze → Silver → Gold) – A structured, layered data flow supporting clean separation between raw, processed, and analytics-ready data.
 
 ---
+
