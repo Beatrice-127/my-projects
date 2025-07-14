@@ -2,15 +2,15 @@
 
 Welcome to my personal project portfolio! This repository contains some of the projects I've worked on to explore and apply what I've learned.
 
-## 📌 About Me
+## About Me
 
 Hi, I'm Libei. I'm currently studying mathematics and I'm interested in combining theory with practical applications. I use this space to document and share some of the things I've built or explored.
 
-## 🚀 Projects
+## Projects
 
 Here are some of the projects included in this repository:
 
-## 📫 Contact
+## Contact
 
 Feel free to reach out!
 
