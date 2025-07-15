@@ -235,7 +235,7 @@ ORDER BY month;
 ```
 With a simple visualization generated in **pgAdmin 4**, we can already begin to observe meaningful patterns in customer activity:
 
-<img src="images/MAU.png" alt="MAU" width="60%"/>
+<img src="images/mau.png" alt="MAU" width="60%"/>
 
 > Olist may be in trouble — growth appears to have stalled and may even be reversing. We'll explore this further in the upcoming analysis.
 
